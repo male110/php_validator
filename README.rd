@@ -1,6 +1,8 @@
-<p>
-<b>php端的输入验证，如果是POST过来的验证POST的变量，否则验证GET</b>
-<code>$rules = array(
+
+php端的输入验证，如果是POST过来的验证POST的变量，否则验证GET
+
+
+$rules = array(
             'name' => array(
                 'required',
                 'maxlength'=>5
@@ -46,27 +48,27 @@
      $data=Validator::GetData($parm);
 	 extract($data);
 	当然了，你也可以直接extract($_POST);区别是可能POST中有你不需要的数据。
-<br/>
+
+
 Validator::ValidateInput($data, $rules, $msg);
-用来验证用户的输入是否正确，成功返回空'',失败反回错误信息，各字段的错误信息以<br/>分隔,用示与<a target='_blank' href='https://www.baidu.com/baidu?tn=monline_3_dg&ie=utf-8&wd=jquery+validate'>JQuery Validate</a>类似支持以下几种验证：<br/>
+用来验证用户的输入是否正确，成功返回空'',失败反回错误信息，各字段的错误信息以<br/>分隔,用示与JQuery Validate类似支持以下几种验证：
 
-regex:正则表达式<br/>
+regex:正则表达式
 
-ip：验证IP地址<br/>
+ip：验证IP地址
 
-numeric:数字，整数或小数<br/>
+numeric:数字，整数或小数
                
-int:整数<br/>
+int:整数
                 
-url:网址<br/>
+url:网址
 
-maxlength:最大长度限制<br/>
+maxlength:最大长度限制
 
-minlength:最小长度限制<br/>
+minlength:最小长度限制
 
-max:最大值<br/>
+max:最大值
 
-min:最小值<br/>
+min:最小值
 
-email:邮箱<br/>
-</p>
+email:邮箱
