@@ -1,4 +1,5 @@
-<b>php¶ËµÄÊäÈëÑéÖ¤£¬Èç¹ûÊÇPOST¹ıÀ´µÄÑéÖ¤POSTµÄ±äÁ¿£¬·ñÔòÑéÖ¤GET</b>
+<p>
+<b>phpç«¯çš„è¾“å…¥éªŒè¯ï¼Œå¦‚æœæ˜¯POSTè¿‡æ¥çš„éªŒè¯POSTçš„å˜é‡ï¼Œå¦åˆ™éªŒè¯GET</b>
 <code>$rules = array(
             'name' => array(
                 'required',
@@ -20,51 +21,52 @@
         );
         $msg = array(
             'name' => array(
-                'required'=>'ÇëÌîĞ´ÓÃ»§Ãû',
-                'maxlength'=>'³¤¶È²»ÄÜ´óÓÚ5'
+                'required'=>'è¯·å¡«å†™ç”¨æˆ·å',
+                'maxlength'=>'é•¿åº¦ä¸èƒ½å¤§äº5'
             ),
             'age' => array(
-                'required'=>'ÇëÌîĞ´ÄêÁä',
-                'int'=>'ÄêÁäÖ»ÄÜÊÇÕûÊı',
+                'required'=>'è¯·å¡«å†™å¹´é¾„',
+                'int'=>'å¹´é¾„åªèƒ½æ˜¯æ•´æ•°',
             ),
             'email' => array(
-                'required'=>'ÇëÌîĞ´email',
-                'email'=>'ÓÊÏä¸ñÊ½´íÎó'
+                'required'=>'è¯·å¡«å†™email',
+                'email'=>'é‚®ç®±æ ¼å¼é”™è¯¯'
             )
         );
         $parm=array('name','age','email');
         $data=Validator::GetData($parm);
         var_dump(Validator::ValidateInput($data, $rules, $msg));
 	</code>
-	GetData ÓÃÀ´»ñÈ¡ÓÃ»§µÄÊäÈë£¬ÓĞÊ±ÎÒÃÇÔÚ³ÌĞòÖĞ»áÕâÑùĞ´´úÂë£º
+	GetData ç”¨æ¥è·å–ç”¨æˆ·çš„è¾“å…¥ï¼Œæœ‰æ—¶æˆ‘ä»¬åœ¨ç¨‹åºä¸­ä¼šè¿™æ ·å†™ä»£ç ï¼š
 	$userName=$_POST['userName'];
 	$password=$_POST['password'];
 	......
-	Ò»¶ÑÕâÑùµÄ´úÂë£¬¿´ÆğÀ´ºÜ²»ÃÀ¹Û¡£¿ÉÒÔÏñÏÂÃæÕâÑùĞ´£º
+	ä¸€å †è¿™æ ·çš„ä»£ç ï¼Œçœ‹èµ·æ¥å¾ˆä¸ç¾è§‚ã€‚å¯ä»¥åƒä¸‹é¢è¿™æ ·å†™ï¼š
 	 $parm=array('name','age','email');
      $data=Validator::GetData($parm);
 	 extract($data);
-	µ±È»ÁË£¬ÄãÒ²¿ÉÒÔÖ±½Óextract($_POST);Çø±ğÊÇ¿ÉÄÜPOSTÖĞÓĞÄã²»ĞèÒªµÄÊı¾İ¡£
+	å½“ç„¶äº†ï¼Œä½ ä¹Ÿå¯ä»¥ç›´æ¥extract($_POST);åŒºåˆ«æ˜¯å¯èƒ½POSTä¸­æœ‰ä½ ä¸éœ€è¦çš„æ•°æ®ã€‚
 <br/>
 Validator::ValidateInput($data, $rules, $msg);
-ÓÃÀ´ÑéÖ¤ÓÃ»§µÄÊäÈëÊÇ·ñÕıÈ·£¬³É¹¦·µ»Ø¿Õ'',Ê§°Ü·´»Ø´íÎóĞÅÏ¢£¬¸÷×Ö¶ÎµÄ´íÎóĞÅÏ¢ÒÔ<br/>·Ö¸ô,ÓÃÊ¾Óë<a target='_blank' href='https://www.baidu.com/baidu?tn=monline_3_dg&ie=utf-8&wd=jquery+validate'>JQuery Validate</a>ÀàËÆÖ§³ÖÒÔÏÂ¼¸ÖÖÑéÖ¤£º<br/>
+ç”¨æ¥éªŒè¯ç”¨æˆ·çš„è¾“å…¥æ˜¯å¦æ­£ç¡®ï¼ŒæˆåŠŸè¿”å›ç©º'',å¤±è´¥åå›é”™è¯¯ä¿¡æ¯ï¼Œå„å­—æ®µçš„é”™è¯¯ä¿¡æ¯ä»¥<br/>åˆ†éš”,ç”¨ç¤ºä¸<a target='_blank' href='https://www.baidu.com/baidu?tn=monline_3_dg&ie=utf-8&wd=jquery+validate'>JQuery Validate</a>ç±»ä¼¼æ”¯æŒä»¥ä¸‹å‡ ç§éªŒè¯ï¼š<br/>
 
-regex:ÕıÔò±í´ïÊ½<br/>
+regex:æ­£åˆ™è¡¨è¾¾å¼<br/>
 
-ip£ºÑéÖ¤IPµØÖ·<br/>
+ipï¼šéªŒè¯IPåœ°å€<br/>
 
-numeric:Êı×Ö£¬ÕûÊı»òĞ¡Êı<br/>
+numeric:æ•°å­—ï¼Œæ•´æ•°æˆ–å°æ•°<br/>
                
-int:ÕûÊı<br/>
+int:æ•´æ•°<br/>
                 
-url:ÍøÖ·<br/>
+url:ç½‘å€<br/>
 
-maxlength:×î´ó³¤¶ÈÏŞÖÆ<br/>
+maxlength:æœ€å¤§é•¿åº¦é™åˆ¶<br/>
 
-minlength:×îĞ¡³¤¶ÈÏŞÖÆ<br/>
+minlength:æœ€å°é•¿åº¦é™åˆ¶<br/>
 
-max:×î´óÖµ<br/>
+max:æœ€å¤§å€¼<br/>
 
-min:×îĞ¡Öµ<br/>
+min:æœ€å°å€¼<br/>
 
-email:ÓÊÏä<br/>
+email:é‚®ç®±<br/>
+</p>
