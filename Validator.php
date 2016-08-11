@@ -182,13 +182,13 @@ class Validator
     //验证字符串的长度
     protected static function maxlength($value, $length)
     {
-        return (strlen($value) <= $length);
+        return (mb_strlen($value) <= $length);
     }
 
     //验证字符串的长度
     protected static function minlength($value, $length)
     {
-        return (strlen($value) >= $length);
+        return (mb_strlen($value) >= $length);
     }
 
     //验证最大值
