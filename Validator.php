@@ -1,14 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2016-07-30
- * Time: 20:47
- */
-
-namespace Common\Common;
-
-
 class Validator
 {
     //获取用户传进来的数据，并验证数据是否正确,成功返回空''，失败返回错误信息
