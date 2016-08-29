@@ -16,11 +16,6 @@ $rules = array(
                 'email'
             )
         );
-        $data = array(
-            'name' => '',
-            'age' => 'abc',
-            'email' =>'123'
-        );
         $msg = array(
             'name' => array(
                 'required'=>'请填写用户名',
@@ -35,9 +30,7 @@ $rules = array(
                 'email'=>'邮箱格式错误'
             )
         );
-        $parm=array('name','age','email');
-        $data=Validator::GetData($parm);
-        var_dump(Validator::ValidateInput($data, $rules, $msg));
+        var_dump(Validator::ValidateInput($_POST, $rules, $msg));
 	</code>
 	GetData 用来获取用户的输入，有时我们在程序中会这样写代码：
 	$userName=$_POST['userName'];
