@@ -1,7 +1,7 @@
 <?php
 class Validator
 {
-    //获取用户传进来的数据，并验证数据是否正确,成功返回空''，失败返回错误信息
+    //获取用户传进来的数据
     public static function GetData($arrParamName)
     {
         $data = array();
